@@ -1,0 +1,30 @@
+[
+    {
+        "id": "2e9dd19ec82f",
+        "name": "Rick Bechtelar",
+        "vehicle": "Toyota Escalade",
+        "lat": "52.2297",
+        "lon": "21.0297"
+    },
+    {
+        "id": "3ba364661c76",
+        "name": "Alya Alternweth",
+        "vehicle": "Jeep Spyder",
+        "lat": "52.2217",
+        "lon": "21.0122"
+    },
+    {
+        "id": "b02d02917",
+        "name": "Rodrick Doloney",
+        "vehicle": "Aton Martin Crussader",
+        "lat": "52.2297",
+        "lon": "21.1222"
+    },
+    {
+        "id": "a56012cf",
+        "name": "Drogo Kuliva",
+        "vehicle": "Honda Supra",
+        "lat": "52.2387",
+        "lon": "21.1122"
+    }
+]

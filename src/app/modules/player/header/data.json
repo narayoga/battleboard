@@ -1,0 +1,1158 @@
+[
+  {
+    "label": "balikpapan",
+    "lokasi": "BALIKPAPAN",
+    "tipe": "WITEL"
+  },
+  {
+    "label": "Kalbar",
+    "lokasi": "KALBAR",
+    "tipe": "WITEL"
+  },
+  {
+    "label": "Kalsel",
+    "lokasi": "KALSEL",
+    "tipe": "WITEL"
+  },
+  {
+    "label": "Kaltara",
+    "lokasi": "KALTARA",
+    "tipe": "WITEL"
+  },
+  {
+    "label": "Kalteng",
+    "lokasi": "KALTENG",
+    "tipe": "WITEL"
+  },
+  {
+    "label": "Samarinda",
+    "lokasi": "SAMARINDA",
+    "tipe": "WITEL"
+  },
+  {
+    "label": "Balikpapan",
+    "lokasi": "Balikpapan",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Banjarbaru",
+    "lokasi": "Banjarbaru",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Banjarmasin",
+    "lokasi": "Banjarmasin",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Batu Licin",
+    "lokasi": "Batu Licin",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Bontang",
+    "lokasi": "Bontang",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Bulungan Berau",
+    "lokasi": "Bulungan Berau",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Ketapang",
+    "lokasi": "Ketapang",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Melak",
+    "lokasi": "Melak",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Mempawah",
+    "lokasi": "Mempawah",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Muarateweh",
+    "lokasi": "Muarateweh",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Nunukan",
+    "lokasi": "Nunukan",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Palangkaraya",
+    "lokasi": "Palangkaraya",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Pangkalan Bun",
+    "lokasi": "Pangkalan Bun",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Pontianak",
+    "lokasi": "Pontianak",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Samarinda",
+    "lokasi": "Samarinda",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Sampit",
+    "lokasi": "Sampit",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Sanggau",
+    "lokasi": "Sanggau",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Singkawang",
+    "lokasi": "Singkawang",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Sintang",
+    "lokasi": "Sintang",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Tanahgrogot",
+    "lokasi": "Tanahgrogot",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Tanjung Tabalong",
+    "lokasi": "Tanjung Tabalong",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "Tarakan",
+    "lokasi": "Tarakan",
+    "tipe": "DATEL"
+  },
+  {
+    "label": "BRU",
+    "lokasi": "BRU",
+    "tipe": "STO"
+  },
+  {
+    "label": "BAM",
+    "lokasi": "BAM",
+    "tipe": "STO"
+  },
+  {
+    "label": "KRO",
+    "lokasi": "KRO",
+    "tipe": "STO"
+  },
+  {
+    "label": "BTK",
+    "lokasi": "BTK",
+    "tipe": "STO"
+  },
+  {
+    "label": "BTK",
+    "lokasi": "BTK",
+    "tipe": "HERO"
+  },
+  {
+    "label": "MKM",
+    "lokasi": "MKM",
+    "tipe": "STO"
+  },
+  {
+    "label": "KJN",
+    "lokasi": "KJN",
+    "tipe": "STO"
+  },
+  {
+    "label": "KJN",
+    "lokasi": "KJN",
+    "tipe": "HERO"
+  },
+  {
+    "label": "KTB",
+    "lokasi": "KTB",
+    "tipe": "STO"
+  },
+  {
+    "label": "PTG",
+    "lokasi": "PTG",
+    "tipe": "STO"
+  },
+  {
+    "label": "LAB",
+    "lokasi": "LAB",
+    "tipe": "STO"
+  },
+  {
+    "label": "LIK",
+    "lokasi": "LIK",
+    "tipe": "STO"
+  },
+  {
+    "label": "MGG",
+    "lokasi": "MGG",
+    "tipe": "STO"
+  },
+  {
+    "label": "MJW",
+    "lokasi": "MJW",
+    "tipe": "STO"
+  },
+  {
+    "label": "PNJ",
+    "lokasi": "PNJ",
+    "tipe": "STO"
+  },
+  {
+    "label": "PNJ",
+    "lokasi": "PNJ",
+    "tipe": "HERO"
+  },
+  {
+    "label": "SKU",
+    "lokasi": "SKU",
+    "tipe": "STO"
+  },
+  {
+    "label": "TNG",
+    "lokasi": "TNG",
+    "tipe": "STO"
+  },
+  {
+    "label": "KNA",
+    "lokasi": "KNA",
+    "tipe": "STO"
+  },
+  {
+    "label": "GSA",
+    "lokasi": "GSA",
+    "tipe": "STO"
+  },
+  {
+    "label": "GSA",
+    "lokasi": "GSA",
+    "tipe": "HERO"
+  },
+  {
+    "label": "SEP",
+    "lokasi": "SEP",
+    "tipe": "STO"
+  },
+  {
+    "label": "AGN",
+    "lokasi": "AGN",
+    "tipe": "STO"
+  },
+  {
+    "label": "AMP",
+    "lokasi": "AMP",
+    "tipe": "STO"
+  },
+  {
+    "label": "AMT",
+    "lokasi": "AMT",
+    "tipe": "STO"
+  },
+  {
+    "label": "AMT",
+    "lokasi": "AMT",
+    "tipe": "HERO"
+  },
+  {
+    "label": "ANJ",
+    "lokasi": "ANJ",
+    "tipe": "STO"
+  },
+  {
+    "label": "BBR",
+    "lokasi": "BBR",
+    "tipe": "STO"
+  },
+  {
+    "label": "BBR",
+    "lokasi": "BBR",
+    "tipe": "HERO"
+  },
+  {
+    "label": "BDO",
+    "lokasi": "BDO",
+    "tipe": "STO"
+  },
+  {
+    "label": "BIG",
+    "lokasi": "BIG",
+    "tipe": "STO"
+  },
+  {
+    "label": "BJM",
+    "lokasi": "BJM",
+    "tipe": "STO"
+  },
+  {
+    "label": "BJM",
+    "lokasi": "BJM",
+    "tipe": "HERO"
+  },
+  {
+    "label": "BKY",
+    "lokasi": "BKY",
+    "tipe": "STO"
+  },
+  {
+    "label": "BLC",
+    "lokasi": "BLC",
+    "tipe": "STO"
+  },
+  {
+    "label": "BLC",
+    "lokasi": "BLC",
+    "tipe": "HERO"
+  },
+  {
+    "label": "BLN",
+    "lokasi": "BLN",
+    "tipe": "STO"
+  },
+  {
+    "label": "BLN",
+    "lokasi": "BLN",
+    "tipe": "HERO"
+  },
+  {
+    "label": "BNT",
+    "lokasi": "BNT",
+    "tipe": "STO"
+  },
+  {
+    "label": "BNT",
+    "lokasi": "BNT",
+    "tipe": "HERO"
+  },
+  {
+    "label": "BOT",
+    "lokasi": "BOT",
+    "tipe": "STO"
+  },
+  {
+    "label": "BRI",
+    "lokasi": "BRI",
+    "tipe": "STO"
+  },
+  {
+    "label": "BOT",
+    "lokasi": "BOT",
+    "tipe": "HERO"
+  },
+  {
+    "label": "BRI",
+    "lokasi": "BRI",
+    "tipe": "HERO"
+  },
+  {
+    "label": "BTB",
+    "lokasi": "BTB",
+    "tipe": "STO"
+  },
+  {
+    "label": "GMB",
+    "lokasi": "GMB",
+    "tipe": "STO"
+  },
+  {
+    "label": "HNU",
+    "lokasi": "HNU",
+    "tipe": "STO"
+  },
+  {
+    "label": "JAW",
+    "lokasi": "JAW",
+    "tipe": "STO"
+  },
+  {
+    "label": "JWT",
+    "lokasi": "JWT",
+    "tipe": "STO"
+  },
+  {
+    "label": "JAW",
+    "lokasi": "JAW",
+    "tipe": "HERO"
+  },
+  {
+    "label": "JWT",
+    "lokasi": "JWT",
+    "tipe": "HERO"
+  },
+  {
+    "label": "KBG",
+    "lokasi": "KBG",
+    "tipe": "STO"
+  },
+  {
+    "label": "KDG",
+    "lokasi": "KDG",
+    "tipe": "STO"
+  },
+  {
+    "label": "KBG",
+    "lokasi": "KBG",
+    "tipe": "HERO"
+  },
+  {
+    "label": "KDG",
+    "lokasi": "KDG",
+    "tipe": "HERO"
+  },
+  {
+    "label": "KIP",
+    "lokasi": "KIP",
+    "tipe": "STO"
+  },
+  {
+    "label": "KKN",
+    "lokasi": "KKN",
+    "tipe": "STO"
+  },
+  {
+    "label": "KKP",
+    "lokasi": "KKP",
+    "tipe": "STO"
+  },
+  {
+    "label": "KKP",
+    "lokasi": "KKP",
+    "tipe": "HERO"
+  },
+  {
+    "label": "KKU",
+    "lokasi": "KKU",
+    "tipe": "STO"
+  },
+  {
+    "label": "KKY",
+    "lokasi": "KKY",
+    "tipe": "STO"
+  },
+  {
+    "label": "KMI",
+    "lokasi": "KMI",
+    "tipe": "STO"
+  },
+  {
+    "label": "KNA",
+    "lokasi": "KNA",
+    "tipe": "STO"
+  },
+  {
+    "label": "KOB",
+    "lokasi": "KOB",
+    "tipe": "STO"
+  },
+  {
+    "label": "KPB",
+    "lokasi": "KPB",
+    "tipe": "STO"
+  },
+  {
+    "label": "KPL",
+    "lokasi": "KPL",
+    "tipe": "STO"
+  },
+  {
+    "label": "KPB",
+    "lokasi": "KPB",
+    "tipe": "HERO"
+  },
+  {
+    "label": "KPL",
+    "lokasi": "KPL",
+    "tipe": "HERO"
+  },
+  {
+    "label": "KRI",
+    "lokasi": "KRI",
+    "tipe": "STO"
+  },
+  {
+    "label": "KRO",
+    "lokasi": "KRO",
+    "tipe": "STO"
+  },
+  {
+    "label": "KSO",
+    "lokasi": "KSO",
+    "tipe": "STO"
+  },
+  {
+    "label": "KTB",
+    "lokasi": "KTB",
+    "tipe": "STO"
+  },
+  {
+    "label": "KTP",
+    "lokasi": "KTP",
+    "tipe": "STO"
+  },
+  {
+    "label": "KSO",
+    "lokasi": "KSO",
+    "tipe": "HERO"
+  },
+  {
+    "label": "KTB",
+    "lokasi": "KTB",
+    "tipe": "HERO"
+  },
+  {
+    "label": "KTP",
+    "lokasi": "KTP",
+    "tipe": "HERO"
+  },
+  {
+    "label": "KWN",
+    "lokasi": "KWN",
+    "tipe": "STO"
+  },
+  {
+    "label": "KYG",
+    "lokasi": "KYG",
+    "tipe": "STO"
+  },
+  {
+    "label": "KYG",
+    "lokasi": "KYG",
+    "tipe": "HERO"
+  },
+  {
+    "label": "LAB",
+    "lokasi": "LAB",
+    "tipe": "HERO"
+  },
+  {
+    "label": "LIK",
+    "lokasi": "LIK",
+    "tipe": "STO"
+  },
+  {
+    "label": "LKT",
+    "lokasi": "LKT",
+    "tipe": "STO"
+  },
+  {
+    "label": "LMD",
+    "lokasi": "LMD",
+    "tipe": "STO"
+  },
+  {
+    "label": "LMP",
+    "lokasi": "LMP",
+    "tipe": "STO"
+  },
+  {
+    "label": "LKT",
+    "lokasi": "LKT",
+    "tipe": "HERO"
+  },
+  {
+    "label": "LMD",
+    "lokasi": "LMD",
+    "tipe": "HERO"
+  },
+  {
+    "label": "LMP",
+    "lokasi": "LMP",
+    "tipe": "HERO"
+  },
+  {
+    "label": "LNN",
+    "lokasi": "LNN",
+    "tipe": "STO"
+  },
+  {
+    "label": "LOB",
+    "lokasi": "LOB",
+    "tipe": "STO"
+  },
+  {
+    "label": "LUL",
+    "lokasi": "LUL",
+    "tipe": "STO"
+  },
+  {
+    "label": "LOB",
+    "lokasi": "LOB",
+    "tipe": "HERO"
+  },
+  {
+    "label": "LUL",
+    "lokasi": "LUL",
+    "tipe": "HERO"
+  },
+  {
+    "label": "MBD",
+    "lokasi": "MBD",
+    "tipe": "STO"
+  },
+  {
+    "label": "MGG",
+    "lokasi": "MGG",
+    "tipe": "STO"
+  },
+  {
+    "label": "MJW",
+    "lokasi": "MJW",
+    "tipe": "STO"
+  },
+  {
+    "label": "MGG",
+    "lokasi": "MGG",
+    "tipe": "HERO"
+  },
+  {
+    "label": "MJW",
+    "lokasi": "MJW",
+    "tipe": "HERO"
+  },
+  {
+    "label": "MKM",
+    "lokasi": "MKM",
+    "tipe": "STO"
+  },
+  {
+    "label": "MLA",
+    "lokasi": "MLA",
+    "tipe": "STO"
+  },
+  {
+    "label": "MLN",
+    "lokasi": "MLN",
+    "tipe": "STO"
+  },
+  {
+    "label": "MPW",
+    "lokasi": "MPW",
+    "tipe": "STO"
+  },
+  {
+    "label": "MLA",
+    "lokasi": "MLA",
+    "tipe": "HERO"
+  },
+  {
+    "label": "MLN",
+    "lokasi": "MLN",
+    "tipe": "HERO"
+  },
+  {
+    "label": "MPW",
+    "lokasi": "MPW",
+    "tipe": "HERO"
+  },
+  {
+    "label": "MRB",
+    "lokasi": "MRB",
+    "tipe": "STO"
+  },
+  {
+    "label": "MTP",
+    "lokasi": "MTP",
+    "tipe": "STO"
+  },
+  {
+    "label": "MTW",
+    "lokasi": "MTW",
+    "tipe": "STO"
+  },
+  {
+    "label": "MTP",
+    "lokasi": "MTP",
+    "tipe": "HERO"
+  },
+  {
+    "label": "MTW",
+    "lokasi": "MTW",
+    "tipe": "HERO"
+  },
+  {
+    "label": "NEG",
+    "lokasi": "NEG",
+    "tipe": "STO"
+  },
+  {
+    "label": "NGG",
+    "lokasi": "NGG",
+    "tipe": "STO"
+  },
+  {
+    "label": "NNK",
+    "lokasi": "NNK",
+    "tipe": "STO"
+  },
+  {
+    "label": "NGG",
+    "lokasi": "NGG",
+    "tipe": "HERO"
+  },
+  {
+    "label": "NNK",
+    "lokasi": "NNK",
+    "tipe": "HERO"
+  },
+  {
+    "label": "NPN",
+    "lokasi": "NPN",
+    "tipe": "STO"
+  },
+  {
+    "label": "PAA",
+    "lokasi": "PAA",
+    "tipe": "STO"
+  },
+  {
+    "label": "PBU",
+    "lokasi": "PBU",
+    "tipe": "STO"
+  },
+  {
+    "label": "PAA",
+    "lokasi": "PAA",
+    "tipe": "HERO"
+  },
+  {
+    "label": "PBU",
+    "lokasi": "PBU",
+    "tipe": "HERO"
+  },
+  {
+    "label": "PEA",
+    "lokasi": "PEA",
+    "tipe": "STO"
+  },
+  {
+    "label": "PGN",
+    "lokasi": "PGN",
+    "tipe": "STO"
+  },
+  {
+    "label": "PGT",
+    "lokasi": "PGT",
+    "tipe": "STO"
+  },
+  {
+    "label": "PLE",
+    "lokasi": "PLE",
+    "tipe": "STO"
+  },
+  {
+    "label": "PLK",
+    "lokasi": "PLK",
+    "tipe": "STO"
+  },
+  {
+    "label": "PLL",
+    "lokasi": "PLL",
+    "tipe": "STO"
+  },
+  {
+    "label": "PLE",
+    "lokasi": "PLE",
+    "tipe": "HERO"
+  },
+  {
+    "label": "PLK",
+    "lokasi": "PLK",
+    "tipe": "HERO"
+  },
+  {
+    "label": "PLL",
+    "lokasi": "PLL",
+    "tipe": "HERO"
+  },
+  {
+    "label": "PMK",
+    "lokasi": "PMK",
+    "tipe": "STO"
+  },
+  {
+    "label": "PPS",
+    "lokasi": "PPS",
+    "tipe": "STO"
+  },
+  {
+    "label": "PRC",
+    "lokasi": "PRC",
+    "tipe": "STO"
+  },
+  {
+    "label": "PTK",
+    "lokasi": "PTK",
+    "tipe": "STO"
+  },
+  {
+    "label": "PUT",
+    "lokasi": "PUT",
+    "tipe": "STO"
+  },
+  {
+    "label": "PYM",
+    "lokasi": "PYM",
+    "tipe": "STO"
+  },
+  {
+    "label": "PTK",
+    "lokasi": "PTK",
+    "tipe": "HERO"
+  },
+  {
+    "label": "PUT",
+    "lokasi": "PUT",
+    "tipe": "HERO"
+  },
+  {
+    "label": "PYM",
+    "lokasi": "PYM",
+    "tipe": "HERO"
+  },
+  {
+    "label": "RBA",
+    "lokasi": "RBA",
+    "tipe": "STO"
+  },
+  {
+    "label": "RTA",
+    "lokasi": "RTA",
+    "tipe": "STO"
+  },
+  {
+    "label": "RTA",
+    "lokasi": "RTA",
+    "tipe": "HERO"
+  },
+  {
+    "label": "SAD",
+    "lokasi": "SAD",
+    "tipe": "STO"
+  },
+  {
+    "label": "SAI",
+    "lokasi": "SAI",
+    "tipe": "STO"
+  },
+  {
+    "label": "SAI",
+    "lokasi": "SAI",
+    "tipe": "HERO"
+  },
+  {
+    "label": "SAN",
+    "lokasi": "SAN",
+    "tipe": "STO"
+  },
+  {
+    "label": "SAO",
+    "lokasi": "SAO",
+    "tipe": "STO"
+  },
+  {
+    "label": "SBR",
+    "lokasi": "SBR",
+    "tipe": "STO"
+  },
+  {
+    "label": "SBR",
+    "lokasi": "SBR",
+    "tipe": "HERO"
+  },
+  {
+    "label": "SDR",
+    "lokasi": "SDR",
+    "tipe": "STO"
+  },
+  {
+    "label": "SED",
+    "lokasi": "SED",
+    "tipe": "STO"
+  },
+  {
+    "label": "SEI",
+    "lokasi": "SEI",
+    "tipe": "STO"
+  },
+  {
+    "label": "SEM",
+    "lokasi": "SEM",
+    "tipe": "STO"
+  },
+  {
+    "label": "SEM",
+    "lokasi": "SEM",
+    "tipe": "HERO"
+  },
+  {
+    "label": "SER",
+    "lokasi": "SER",
+    "tipe": "STO"
+  },
+  {
+    "label": "SGK",
+    "lokasi": "SGK",
+    "tipe": "STO"
+  },
+  {
+    "label": "SGU",
+    "lokasi": "SGU",
+    "tipe": "STO"
+  },
+  {
+    "label": "SGK",
+    "lokasi": "SGK",
+    "tipe": "HERO"
+  },
+  {
+    "label": "SGU",
+    "lokasi": "SGU",
+    "tipe": "HERO"
+  },
+  {
+    "label": "SKU",
+    "lokasi": "SKU",
+    "tipe": "STO"
+  },
+  {
+    "label": "SMB",
+    "lokasi": "SMB",
+    "tipe": "STO"
+  },
+  {
+    "label": "SMR",
+    "lokasi": "SMR",
+    "tipe": "STO"
+  },
+  {
+    "label": "SNW",
+    "lokasi": "SNW",
+    "tipe": "STO"
+  },
+  {
+    "label": "SMB",
+    "lokasi": "SMB",
+    "tipe": "HERO"
+  },
+  {
+    "label": "SMR",
+    "lokasi": "SMR",
+    "tipe": "HERO"
+  },
+  {
+    "label": "SNW",
+    "lokasi": "SNW",
+    "tipe": "HERO"
+  },
+  {
+    "label": "SNY",
+    "lokasi": "SNY",
+    "tipe": "STO"
+  },
+  {
+    "label": "SPY",
+    "lokasi": "SPY",
+    "tipe": "STO"
+  },
+  {
+    "label": "SRD",
+    "lokasi": "SRD",
+    "tipe": "STO"
+  },
+  {
+    "label": "SRY",
+    "lokasi": "SRY",
+    "tipe": "STO"
+  },
+  {
+    "label": "STA",
+    "lokasi": "STA",
+    "tipe": "STO"
+  },
+  {
+    "label": "STG",
+    "lokasi": "STG",
+    "tipe": "STO"
+  },
+  {
+    "label": "STI",
+    "lokasi": "STI",
+    "tipe": "STO"
+  },
+  {
+    "label": "STT",
+    "lokasi": "STT",
+    "tipe": "STO"
+  },
+  {
+    "label": "SRY",
+    "lokasi": "SRY",
+    "tipe": "HERO"
+  },
+  {
+    "label": "STA",
+    "lokasi": "STA",
+    "tipe": "HERO"
+  },
+  {
+    "label": "STG",
+    "lokasi": "STG",
+    "tipe": "HERO"
+  },
+  {
+    "label": "STI",
+    "lokasi": "STI",
+    "tipe": "HERO"
+  },
+  {
+    "label": "STT",
+    "lokasi": "STT",
+    "tipe": "HERO"
+  },
+  {
+    "label": "SUA",
+    "lokasi": "SUA",
+    "tipe": "STO"
+  },
+  {
+    "label": "TAJ",
+    "lokasi": "TAJ",
+    "tipe": "STO"
+  },
+  {
+    "label": "TBA",
+    "lokasi": "TBA",
+    "tipe": "STO"
+  },
+  {
+    "label": "TBY",
+    "lokasi": "TBY",
+    "tipe": "STO"
+  },
+  {
+    "label": "TGG",
+    "lokasi": "TGG",
+    "tipe": "STO"
+  },
+  {
+    "label": "TJL",
+    "lokasi": "TJL",
+    "tipe": "STO"
+  },
+  {
+    "label": "TBY",
+    "lokasi": "TBY",
+    "tipe": "HERO"
+  },
+  {
+    "label": "TGG",
+    "lokasi": "TGG",
+    "tipe": "HERO"
+  },
+  {
+    "label": "TJL",
+    "lokasi": "TJL",
+    "tipe": "HERO"
+  },
+  {
+    "label": "TKI",
+    "lokasi": "TKI",
+    "tipe": "STO"
+  },
+  {
+    "label": "TLA",
+    "lokasi": "TLA",
+    "tipe": "STO"
+  },
+  {
+    "label": "TMD",
+    "lokasi": "TMD",
+    "tipe": "STO"
+  },
+  {
+    "label": "TML",
+    "lokasi": "TML",
+    "tipe": "STO"
+  },
+  {
+    "label": "TNG",
+    "lokasi": "TNG",
+    "tipe": "STO"
+  },
+  {
+    "label": "TML",
+    "lokasi": "TML",
+    "tipe": "HERO"
+  },
+  {
+    "label": "TNG",
+    "lokasi": "TNG",
+    "tipe": "HERO"
+  },
+  {
+    "label": "TPE",
+    "lokasi": "TPE",
+    "tipe": "STO"
+  },
+  {
+    "label": "TRD",
+    "lokasi": "TRD",
+    "tipe": "STO"
+  },
+  {
+    "label": "TRD",
+    "lokasi": "TRD",
+    "tipe": "HERO"
+  },
+  {
+    "label": "TRK",
+    "lokasi": "TRK",
+    "tipe": "STO"
+  },
+  {
+    "label": "TSL",
+    "lokasi": "TSL",
+    "tipe": "STO"
+  },
+  {
+    "label": "TRK",
+    "lokasi": "TRK",
+    "tipe": "HERO"
+  },
+  {
+    "label": "TSL",
+    "lokasi": "TSL",
+    "tipe": "HERO"
+  },
+  {
+    "label": "TSN",
+    "lokasi": "TSN",
+    "tipe": "STO"
+  },
+  {
+    "label": "ULI",
+    "lokasi": "ULI",
+    "tipe": "STO"
+  },
+  {
+    "label": "ULI",
+    "lokasi": "ULI",
+    "tipe": "HERO"
+  }
+   
+]

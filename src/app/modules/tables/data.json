@@ -1,0 +1,87 @@
+[
+  {
+    "label": "BRU",
+    "lokasi": "BRU",
+    "tipe": "STO"
+  },
+  {
+    "label": "BAM",
+    "lokasi": "BAM",
+    "tipe": "STO"
+  },
+  {
+    "label": "KRO",
+    "lokasi": "KRO",
+    "tipe": "STO"
+  },
+  {
+    "label": "BTK",
+    "lokasi": "BTK",
+    "tipe": "STO"
+  },
+  {
+    "label": "MKM",
+    "lokasi": "MKM",
+    "tipe": "STO"
+  },
+  {
+    "label": "KJN",
+    "lokasi": "KJN",
+    "tipe": "STO"
+  },
+  {
+    "label": "KTB",
+    "lokasi": "KTB",
+    "tipe": "STO"
+  },
+  {
+    "label": "PTG",
+    "lokasi": "PTG",
+    "tipe": "STO"
+  },
+  {
+    "label": "LAB",
+    "lokasi": "LAB",
+    "tipe": "STO"
+  },
+  {
+    "label": "LIK",
+    "lokasi": "LIK",
+    "tipe": "STO"
+  },
+  {
+    "label": "MGG",
+    "lokasi": "MGG",
+    "tipe": "STO"
+  },
+  {
+    "label": "MJW",
+    "lokasi": "MJW",
+    "tipe": "STO"
+  },
+  {
+    "label": "PNJ",
+    "lokasi": "PNJ",
+    "tipe": "STO"
+  },
+  {
+    "label": "SKU",
+    "lokasi": "SKU",
+    "tipe": "STO"
+  },
+  {
+    "label": "TNG",
+    "lokasi": "TNG",
+    "tipe": "STO"
+  },
+  {
+    "label": "KNA",
+    "lokasi": "KNA",
+    "tipe": "STO"
+  },
+  {
+    "label": "GSA",
+    "lokasi": "GSA",
+    "tipe": "STO"
+  }
+]
