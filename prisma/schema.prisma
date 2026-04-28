@@ -1,0 +1,92 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  username  String   @unique
+  password  String
+  role      String
+  handphone String
+  createdAt DateTime @default(now())
+}
+
+model Location {
+  id     Int    @id @default(autoincrement())
+  label  String
+  lokasi String
+  tipe   String // STO | DATEL | WITEL | HERO
+
+  @@unique([lokasi, tipe])
+  @@index([lokasi, tipe])
+}
+
+model EmployeeProfile {
+  id            Int     @id @default(autoincrement())
+  lokasi        String
+  tipe          String
+  bulan         String
+  tahun         String
+  nama          String
+  jabatan       String
+  level         String  // KECIL | BESAR | SEDANG
+  photoUrl      String?
+  lis           Float
+  billingAmount Float
+  newSales      Float
+
+  @@index([lokasi, tipe, bulan, tahun])
+}
+
+// type: lis | billing | pranpc | sales | kw1 | kw2 | kw3 | kw4 | c3mr | addon
+model PerformanceMonthly {
+  id     Int     @id @default(autoincrement())
+  lokasi String
+  tipe   String
+  tahun  String
+  type   String
+  jan    Float?
+  feb    Float?
+  mar    Float?
+  apr    Float?
+  mei    Float?
+  jun    Float?
+  jul    Float?
+  agu    Float?
+  sep    Float?
+  okt    Float?
+  nov    Float?
+  des    Float?
+
+  @@unique([lokasi, tipe, tahun, type])
+  @@index([lokasi, tipe, tahun])
+}
+
+model OdpPort {
+  id        Int    @id @default(autoincrement())
+  lokasi    String
+  tipe      String
+  latitude  Float
+  longitude Float
+
+  @@index([lokasi, tipe])
+}
+
+// 11 baris per kombinasi (lokasi, tipe, tahun)
+model OdpHistory {
+  id      Int    @id @default(autoincrement())
+  lokasi  String
+  tipe    String
+  tahun   String
+  bulan   Int    // 0-10
+  isTotal Float
+  avai    Float
+  used    Float
+
+  @@index([lokasi, tipe, tahun])
+}
