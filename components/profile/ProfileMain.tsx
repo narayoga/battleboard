@@ -21,6 +21,12 @@ interface Profile {
   photoUrl?: string
 }
 
+const TAB_CONFIG: { key: Tab; label: string; icon: string }[] = [
+  { key: 'overview', label: 'Overview',  icon: 'bi-bar-chart-line' },
+  { key: 'Digital',  label: 'Digital',   icon: 'bi-phone'          },
+  { key: 'alpro',    label: 'Alpro',     icon: 'bi-geo-alt'        },
+]
+
 function commaSeparate(val: number): string {
   return val.toLocaleString('en-US')
 }
@@ -36,10 +42,7 @@ export default function ProfileMain() {
     setLoading(true)
     try {
       const res = await axios.post('/api/profile', {
-        lokasi,
-        tipe,
-        bulan: 'sep',
-        tahun: '2022',
+        lokasi, tipe, bulan: 'sep', tahun: '2022',
       })
       if (res.data.length > 0) {
         setProfile(res.data[0])
@@ -64,126 +67,112 @@ export default function ProfileMain() {
   }
 
   return (
-    <div className="d-flex flex-column flex-root min-vh-100">
+    <div className="dashboard-root">
+      {/* Background blobs */}
+      <div className="dash-blob dash-blob-1" />
+      <div className="dash-blob dash-blob-2" />
+      <div className="dash-blob dash-blob-3" />
+
       <Header />
 
-      <div className="page d-flex flex-row flex-column-fluid">
-        <div className="d-flex flex-column flex-row-fluid" id="kt_wrapper">
-          <div id="kt_content" className="content d-flex flex-column flex-column-fluid">
-            <div className="post d-flex flex-column-fluid" id="kt_post">
-              <div id="kt_content_container" className="container-xxl">
+      <main className="dash-content">
 
-                {/* Search */}
-                <div className="pt-6">
-                  <Search onSelect={handleSelectLocation} />
-                </div>
+        {/* ── Search ── */}
+        <div style={{ marginBottom: 28, maxWidth: 420 }}>
+          <Search onSelect={handleSelectLocation} />
+        </div>
 
-                {/* Profile Card */}
-                <div className="card mb-5 mb-xl-10">
-                  <div className="card-body pt-9 pb-0">
-                    <div className="d-flex flex-wrap flex-sm-nowrap mb-3">
+        {/* ── Profile Card ── */}
+        <div className="profile-glass-card">
+          <div className="profile-card-inner">
+            <div className="d-flex flex-wrap flex-sm-nowrap">
 
-                      {/* Photo */}
-                      <div className="me-7 mb-4">
-                        <div style={{ width: 150, height: 150 }}>
-                          {profile?.photoUrl ? (
-                            <img
-                              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 30%', borderRadius: 10 }}
-                              src={profile.photoUrl}
-                              alt={profile.nama}
-                            />
-                          ) : (
-                            <div className="bg-secondary rounded d-flex align-items-center justify-content-center" style={{ width: '100%', height: '100%', borderRadius: 10 }}>
-                              <i className="bi bi-person fs-1 text-muted" />
-                            </div>
-                          )}
-                        </div>
-                      </div>
+              {/* Photo */}
+              <div className="profile-photo-box">
+                {profile?.photoUrl ? (
+                  <img src={profile.photoUrl} alt={profile.nama} />
+                ) : (
+                  <i className="bi bi-person" style={{ fontSize: 38, color: 'rgba(255,255,255,0.18)' }} />
+                )}
+              </div>
 
-                      {/* Info */}
-                      <div className="flex-grow-1">
-                        <div className="d-flex justify-content-between align-items-start flex-wrap mb-2">
-                          <div className="d-flex flex-column">
-                            {loading ? (
-                              <div className="d-flex align-items-center mb-2">
-                                <div className="spinner-border spinner-border-sm me-2" />
-                                <span className="text-muted">loading...</span>
-                              </div>
-                            ) : (
-                              <div className="d-flex align-items-center mb-2">
-                                <span className="text-gray-800 fs-2 fw-bolder me-3">
-                                  {profile?.nama ?? '—'}
-                                </span>
-                                {profile?.level === 'KECIL'  && <span className="badge badge-danger">{profile.level}</span>}
-                                {profile?.level === 'BESAR'  && <span className="badge badge-success">{profile.level}</span>}
-                                {profile?.level === 'SEDANG' && <span className="badge badge-warning">{profile.level}</span>}
-                              </div>
-                            )}
-                            <div className="d-flex flex-wrap fw-bold fs-6 mb-4 pe-2">
-                              <span className="d-flex align-items-center text-gray-400 me-5 mb-2">
-                                <i className="bi bi-person-badge me-1" />
-                                {loading ? '...' : (profile?.jabatan ?? '—')}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
+              {/* Info */}
+              <div className="flex-grow-1">
 
-                        {/* Stats */}
-                        {!loading && profile && (
-                          <div className="d-flex flex-wrap flex-stack">
-                            <div className="d-flex flex-column flex-grow-1 pe-8">
-                              <div className="d-flex flex-wrap">
-                                <div className="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
-                                  <div className="fs-2 fw-bolder">{commaSeparate(profile.lis)}</div>
-                                  <div className="fw-bold fs-6 text-gray-400">Subscribers</div>
-                                </div>
-                                <div className="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
-                                  <div className="fs-2 fw-bolder">IDR {commaSeparate(profile.billingAmount)}</div>
-                                  <div className="fw-bold fs-6 text-gray-400">Monthly Revenue</div>
-                                </div>
-                                <div className="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
-                                  <div className="fs-2 fw-bolder">{commaSeparate(profile.newSales)}</div>
-                                  <div className="fw-bold fs-6 text-gray-400">Sales</div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        )}
-                      </div>
+                {/* Name row */}
+                <div className="d-flex align-items-center flex-wrap gap-2" style={{ marginBottom: 2 }}>
+                  {loading ? (
+                    <div className="d-flex align-items-center gap-2">
+                      <div className="spinner-border spinner-border-sm" />
+                      <span style={{ color: 'rgba(255,255,255,0.35)', fontSize: 13 }}>Loading...</span>
                     </div>
-
-                    {/* Tabs */}
-                    {tab !== false && (
-                      <div className="d-flex overflow-auto h-55px">
-                        <ul className="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bolder flex-nowrap">
-                          {(['overview', 'Digital', 'alpro'] as Tab[]).map((t) => (
-                            <li key={t} className="nav-item cursor-pointer">
-                              <div
-                                onClick={() => setTab(t)}
-                                className={`nav-link me-6 ${tab === t ? 'active' : ''}`}
-                                style={{ cursor: 'pointer' }}
-                              >
-                                {t === 'overview' ? 'Overview' : t === 'Digital' ? 'Digital' : 'Alpro'}
-                              </div>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </div>
+                  ) : (
+                    <>
+                      <span className="profile-name">{profile?.nama ?? '—'}</span>
+                      {profile?.level === 'KECIL'  && <span className="badge badge-danger">{profile.level}</span>}
+                      {profile?.level === 'BESAR'  && <span className="badge badge-success">{profile.level}</span>}
+                      {profile?.level === 'SEDANG' && <span className="badge badge-warning">{profile.level}</span>}
+                    </>
+                  )}
                 </div>
 
-                {/* Tab Content */}
-                {!loading && tab === 'overview' && <Overview lokasi={lokasi} tipe={tipe} />}
-                {!loading && tab === 'Digital'  && <Digital  lokasi={lokasi} tipe={tipe} />}
-                {!loading && tab === 'alpro'    && <Alpro    lokasi={lokasi} tipe={tipe} />}
+                {/* Jabatan */}
+                <div className="profile-jabatan-row">
+                  <i className="bi bi-person-badge" style={{ color: 'rgba(255,255,255,0.28)', fontSize: 14 }} />
+                  <span className="profile-jabatan-text">
+                    {loading ? '...' : (profile?.jabatan ?? '—')}
+                  </span>
+                </div>
 
+                {/* Stat boxes */}
+                {!loading && profile && (
+                  <div className="profile-stats-row">
+                    <div className="profile-stat-box">
+                      <div className="profile-stat-value">{commaSeparate(profile.lis)}</div>
+                      <div className="profile-stat-label">Subscribers</div>
+                    </div>
+                    <div className="profile-stat-box">
+                      <div className="profile-stat-value">IDR {commaSeparate(profile.billingAmount)}</div>
+                      <div className="profile-stat-label">Monthly Revenue</div>
+                    </div>
+                    <div className="profile-stat-box">
+                      <div className="profile-stat-value">{commaSeparate(profile.newSales)}</div>
+                      <div className="profile-stat-label">Sales</div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
+
+            {/* Tab nav */}
+            {tab !== false && (
+              <div className="dash-tab-wrap">
+                <ul className="dash-tab-list">
+                  {TAB_CONFIG.map(({ key, label, icon }) => (
+                    <li key={key}>
+                      <div
+                        className={`dash-tab-btn ${tab === key ? 'active-tab' : ''}`}
+                        onClick={() => setTab(key)}
+                      >
+                        <i className={`bi ${icon}`} />
+                        {label}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
-          <Footer />
         </div>
-      </div>
+
+        {/* ── Tab Content ── */}
+        {!loading && tab === 'overview' && <Overview lokasi={lokasi} tipe={tipe} />}
+        {!loading && tab === 'Digital'  && <Digital  lokasi={lokasi} tipe={tipe} />}
+        {!loading && tab === 'alpro'    && <Alpro    lokasi={lokasi} tipe={tipe} />}
+
+      </main>
+
+      <Footer />
     </div>
   )
 }

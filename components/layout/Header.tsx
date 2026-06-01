@@ -18,33 +18,31 @@ export default function Header({ username, nama }: HeaderProps) {
   }
 
   return (
-    <div id="kt_header" style={{ backgroundColor: '#1b1b28' }}>
-      <div className="container d-flex align-items-stretch justify-content-between flex-lg-grow-1">
-        {/* Title */}
-        <div className="d-flex align-items-center">
-          <h2 className="text-white mb-0">Battle Room</h2>
+    <header className="dash-header">
+      {/* Left — Logo + Title */}
+      <div className="dash-header-left">
+        <div className="dash-header-logo">
+          <i className="bi bi-shield-check" />
         </div>
+        <span className="dash-header-title-text">Battle Room</span>
+      </div>
 
-        {/* User menu */}
-        <div className="d-flex align-items-stretch flex-shrink-0">
-          <div
-            className="cursor-pointer symbol symbol-30px symbol-md-40px d-flex px-5 py-2"
-            style={{ borderRadius: '5px', margin: '10px 0' }}
-          >
-            <div className="me-2 text-white">
-              <span className="fw-bold">{nama || username}</span>
-              <div className="fs-7 text-gray-400">{username}</div>
-            </div>
+      {/* Right — User info + Logout */}
+      <div className="dash-header-right">
+        {(nama || username) && (
+          <div className="dash-user-info">
+            <div className="dash-user-name">{nama || username}</div>
+            {nama && username && <div className="dash-user-role">{username}</div>}
           </div>
-          <div
-            className="d-flex align-items-center cursor-pointer text-white px-3"
-            onClick={handleLogout}
-            title="Logout"
-          >
-            <i className="bi bi-box-arrow-right fs-2x" />
-          </div>
+        )}
+        <div
+          className="dash-logout-btn"
+          onClick={handleLogout}
+          title="Logout"
+        >
+          <i className="bi bi-box-arrow-right" />
         </div>
       </div>
-    </div>
+    </header>
   )
 }

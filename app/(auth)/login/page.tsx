@@ -6,16 +6,16 @@ import axios from 'axios'
 
 export default function LoginPage() {
   const router = useRouter()
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError]       = useState('')
-  const [loading, setLoading]   = useState(false)
+  const [username, setUsername]       = useState('')
+  const [password, setPassword]       = useState('')
+  const [error, setError]             = useState('')
+  const [loading, setLoading]         = useState(false)
+  const [showPassword, setShowPassword] = useState(false)
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
     setError('')
     setLoading(true)
-
     try {
       await axios.post('/api/auth/login', { username, password })
       router.push('/profile')
@@ -28,73 +28,104 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed min-vh-100 bg-light">
-      <div className="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
-        {/* Logo */}
-        <div className="mb-8 text-center">
-          <h1 className="fw-bold fs-1">Battle Room</h1>
-          <p className="text-muted">Planning Access Supervision</p>
+    <div className="login-root">
+      {/* Floating blobs */}
+      <div className="login-blob login-blob-1" />
+      <div className="login-blob login-blob-2" />
+      <div className="login-blob login-blob-3" />
+
+      {/* Card */}
+      <div className="login-card animate__animated animate__fadeInUp animate__faster">
+
+        {/* Brand */}
+        <div className="login-brand">
+          <div className="login-logo">
+            <i className="bi bi-shield-check" />
+          </div>
+          <h1 className="login-title">Battle Room</h1>
+          <p className="login-subtitle">Planning Access Supervision</p>
         </div>
 
-        {/* Form card */}
-        <div className="w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
-          <form className="form w-100" onSubmit={handleSubmit} noValidate>
-            <div className="text-center mb-10">
-              <h2 className="text-dark mb-3">Sign In to Battle Room</h2>
+        <form onSubmit={handleSubmit} noValidate>
+
+          {/* Error alert */}
+          {error && (
+            <div className="login-alert">
+              <i className="bi bi-exclamation-circle me-2" />
+              {error}
             </div>
+          )}
 
-            {error && (
-              <div className="mb-lg-15 alert alert-danger">
-                <div className="alert-text font-weight-bold">{error}</div>
-              </div>
-            )}
-
-            <div className="fv-row mb-10">
-              <label className="form-label fs-6 fw-bolder text-dark">Username</label>
+          {/* Username */}
+          <div className="login-field">
+            <label className="login-label">Username</label>
+            <div className="login-input-wrap">
+              <i className="bi bi-person login-input-icon" />
               <input
-                className="form-control form-control-lg form-control-solid"
                 type="text"
-                name="username"
-                placeholder="username"
-                autoComplete="off"
+                className="login-input"
+                placeholder="Enter your username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
+                autoComplete="off"
                 required
               />
             </div>
+          </div>
 
-            <div className="fv-row mb-10">
-              <label className="form-label fw-bolder text-dark fs-6 mb-0">Password</label>
+          {/* Password */}
+          <div className="login-field">
+            <label className="login-label">Password</label>
+            <div className="login-input-wrap">
+              <i className="bi bi-lock login-input-icon" />
               <input
-                className="form-control form-control-lg form-control-solid mt-2"
-                type="password"
-                name="password"
-                placeholder="password"
-                autoComplete="off"
+                type={showPassword ? 'text' : 'password'}
+                className="login-input"
+                placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                autoComplete="off"
                 required
               />
-            </div>
-
-            <div className="text-center">
               <button
-                type="submit"
-                className="btn btn-lg btn-primary w-100 mb-5"
-                disabled={loading || !username || !password}
+                type="button"
+                className="login-eye"
+                onClick={() => setShowPassword((v) => !v)}
+                tabIndex={-1}
+                aria-label="Toggle password visibility"
               >
-                {loading ? (
-                  <span>
-                    Please wait...{' '}
-                    <span className="spinner-border spinner-border-sm align-middle ms-2" />
-                  </span>
-                ) : (
-                  <span>Continue</span>
-                )}
+                <i className={`bi bi-eye${showPassword ? '-slash' : ''}`} />
               </button>
             </div>
-          </form>
+          </div>
+
+          {/* Submit */}
+          <button
+            type="submit"
+            className="login-btn"
+            disabled={loading || !username || !password}
+          >
+            {loading ? (
+              <>
+                <span className="spinner-border spinner-border-sm me-2" />
+                Authenticating...
+              </>
+            ) : (
+              <>
+                Sign In
+                <i className="bi bi-arrow-right ms-2" />
+              </>
+            )}
+          </button>
+        </form>
+
+        {/* Footer note */}
+        <div className="login-divider">
+          <div className="login-divider-line" />
+          <span className="login-footer-text">Secure &amp; Encrypted Connection</span>
+          <div className="login-divider-line" />
         </div>
+
       </div>
     </div>
   )
