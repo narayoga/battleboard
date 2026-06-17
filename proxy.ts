@@ -32,6 +32,7 @@ export async function proxy(req: NextRequest) {
 export const config = {
   matcher: [
     '/profile/:path*',
+    '/profile-dark',
     '/login',
     '/api/((?!auth).+)', // semua /api/* kecuali /api/auth/*
   ],

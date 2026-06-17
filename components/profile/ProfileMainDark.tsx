@@ -31,7 +31,7 @@ function commaSeparate(val: number): string {
   return val.toLocaleString('en-US')
 }
 
-export default function ProfileMain() {
+export default function ProfileMainDark() {
   const [lokasi, setLokasi]   = useState('BRU')
   const [tipe, setTipe]       = useState('STO')
   const [profile, setProfile] = useState<Profile | null>(null)

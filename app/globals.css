@@ -15,6 +15,10 @@ html, body {
 
 a { text-decoration: none; color: inherit; }
 
+
+
+
+
 /* ============================================
    Layout
    ============================================ */
@@ -37,16 +41,26 @@ a { text-decoration: none; color: inherit; }
 }
 
 .min-vh-100 { min-height: 100vh; }
+
 .cursor-pointer { cursor: pointer; }
 
-/* ============================================
-   Card custom
-   ============================================ */
-.card { border: none; box-shadow: 0 0 20px 0 rgba(76,87,125,.02); }
-.card-header { border-bottom: 1px solid #eff2f5; }
+
+
+
 
 /* ============================================
-   Nav line tabs (profile tabs)
+   Custom Card
+   ============================================ */
+.card { border: none; box-shadow: 0 0 20px 0 rgba(76,87,125,.02); }
+
+.card-header { border-bottom: 1px solid #eff2f5; }
+
+
+
+
+
+/* ============================================
+   Navigation Line Tabs (Profile Tabs)
    ============================================ */
 .nav-line-tabs .nav-item .nav-link {
   color: #a1a5b7;
@@ -56,36 +70,53 @@ a { text-decoration: none; color: inherit; }
   font-weight: 600;
   transition: color .2s ease;
 }
+
 .nav-line-tabs .nav-item .nav-link:hover,
 .nav-line-tabs .nav-item .nav-link.active {
   color: #009ef7;
   border-bottom-color: #009ef7;
 }
 
-/* ============================================
-   Badges custom colors
-   ============================================ */
-.badge-danger  { background-color: #f1416c; color: #fff; padding: 4px 8px; border-radius: 6px; font-size: 11px; }
-.badge-success { background-color: #50cd89; color: #fff; padding: 4px 8px; border-radius: 6px; font-size: 11px; }
-.badge-warning { background-color: #ffc700; color: #fff; padding: 4px 8px; border-radius: 6px; font-size: 11px; }
-.badge-light-primary { background-color: #f1faff; color: #009ef7; padding: 3px 8px; border-radius: 6px; font-size: 11px; }
+
+
+
 
 /* ============================================
-   Form controls custom
+   Custom Badge Colors
+   ============================================ */
+.badge-danger { background-color: #f1416c; color: #fff; padding: 4px 8px; border-radius: 6px; font-size: 11px; }
+
+.badge-success { background-color: #50cd89; color: #fff; padding: 4px 8px; border-radius: 6px; font-size: 11px; }
+
+.badge-warning { background-color: #ffc700; color: #fff; padding: 4px 8px; border-radius: 6px; font-size: 11px; }
+
+.badge-light-primary { background-color: #f1faff; color: #009ef7; padding: 3px 8px; border-radius: 6px; font-size: 11px; }
+
+
+
+
+
+/* ============================================
+   Custom Form Controls
    ============================================ */
 .form-control-solid {
   background-color: #f5f8fa;
   border-color: #f5f8fa;
   color: #5e6278;
 }
+
 .form-control-solid:focus {
   background-color: #eef3f7;
   border-color: #eef3f7;
   box-shadow: none;
 }
 
+
+
+
+
 /* ============================================
-   Header styles
+   Header Styles
    ============================================ */
 #kt_header .container {
   max-width: 100%;
@@ -104,7 +135,12 @@ a { text-decoration: none; color: inherit; }
   color: rgba(255,255,255,.75);
   transition: color .2s ease;
 }
+
 .logout:hover { color: #fff; }
+
+
+
+
 
 /* ============================================
    Footer
@@ -115,59 +151,38 @@ a { text-decoration: none; color: inherit; }
   padding: 1rem 24px;
 }
 
+
+
+
+
 /* ============================================
-   Spinner override
+   Spinner Override
    ============================================ */
 .spinner-border-sm { width: 1rem; height: 1rem; }
 
+
+
+
+
 /* ============================================
-   Leaflet map container
+   Leaflet Map Container
    ============================================ */
 .leaflet-container { border-radius: 8px; }
 
-/* ============================================================
-   Dashboard Theme — Dark Glassy Business
-   ============================================================ */
 
+
+
+
+/* ============================================
+   Dashboard Theme — Metronic Light (senada CRM)
+   ============================================ */
 .dashboard-root {
   min-height: 100vh;
-  background: #060b18;
-  color: #e2e8f0;
-  position: relative;
-  overflow-x: hidden;
+  background: #f5f8fa;
 }
 
-/* (grid dihapus — mengganggu grafik) */
 
-/* Background blobs */
-.dash-blob {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(100px);
-  pointer-events: none;
-  z-index: 0;
-  animation: blobFloat 10s ease-in-out infinite;
-}
-.dash-blob-1 {
-  width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(14,165,233,0.13), transparent 70%);
-  top: -200px; left: -150px;
-  animation-delay: 0s;
-}
-.dash-blob-2 {
-  width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(99,102,241,0.11), transparent 70%);
-  bottom: 5%; right: -120px;
-  animation-delay: -4s;
-}
-.dash-blob-3 {
-  width: 350px; height: 350px;
-  background: radial-gradient(circle, rgba(20,184,166,0.09), transparent 70%);
-  top: 35%; left: 60%;
-  animation-delay: -7s;
-}
-
-/* ===== Header ===== */
+/* ===== Header — dark, cermin aside CRM ===== */
 .dash-header {
   position: sticky;
   top: 0;
@@ -178,10 +193,8 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   justify-content: space-between;
   padding: 0 32px;
-  background: rgba(6,11,24,0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,0.07);
+  background: #1b1b28;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.05);
 }
 
 .dash-header-left {
@@ -191,29 +204,29 @@ a { text-decoration: none; color: inherit; }
 }
 
 .dash-header-logo {
-  width: 36px; height: 36px;
-  background: linear-gradient(135deg, #0ea5e9, #6366f1);
-  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+  background: #009ef7;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 15px;
   color: white;
-  box-shadow: 0 4px 14px rgba(14,165,233,0.4);
   flex-shrink: 0;
 }
 
 .dash-header-title-text {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   color: #ffffff;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.2px;
 }
 
 .dash-header-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 .dash-user-info { text-align: right; }
@@ -221,160 +234,136 @@ a { text-decoration: none; color: inherit; }
 .dash-user-name {
   font-size: 13px;
   font-weight: 600;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.85);
   line-height: 1.3;
 }
 
 .dash-user-role {
   font-size: 11px;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.35);
 }
 
 .dash-logout-btn {
-  width: 36px; height: 36px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.09);
-  border-radius: 10px;
+  width: 34px;
+  height: 34px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.5);
   cursor: pointer;
   transition: all 0.2s ease;
-  font-size: 16px;
-}
-.dash-logout-btn:hover {
-  background: rgba(239,68,68,0.15);
-  border-color: rgba(239,68,68,0.3);
-  color: #fca5a5;
+  font-size: 15px;
 }
 
-/* ===== Main content area ===== */
+.dash-logout-btn:hover {
+  background: rgba(255,255,255,0.12);
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.2);
+}
+
+
+/* ===== Content area ===== */
 .dash-content {
-  position: relative;
-  z-index: 2;
-  padding: 32px;
+  padding: 28px 32px;
   max-width: 1500px;
   margin: 0 auto;
 }
 
-/* ===== Glass Card (generic — inner chart cards) ===== */
-.glass-card {
-  background: #111d35;
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-  margin-bottom: 24px;
-}
-
-.glass-card-header {
-  padding: 18px 24px 16px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  display: flex;
-  align-items: center;
-}
-
-.glass-card-title {
-  font-size: 14px;
-  font-weight: 600;
-  color: rgba(255,255,255,0.8);
-  margin: 0;
-}
-
-.glass-card-body { padding: 24px; }
 
 /* ===== Profile Card ===== */
 .profile-glass-card {
-  background: #0d1526;
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
-  margin-bottom: 28px;
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 20px 0 rgba(76,87,125,0.07);
+  margin-bottom: 24px;
 }
 
-.profile-card-inner { padding: 28px 28px 0; }
+.profile-card-inner { padding: 24px 24px 0; }
 
 .profile-photo-box {
-  width: 108px; height: 108px;
-  border-radius: 16px;
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
   overflow: hidden;
-  border: 2px solid rgba(255,255,255,0.1);
+  border: 3px solid #f5f8fa;
   flex-shrink: 0;
-  margin-right: 28px;
+  margin-right: 24px;
   margin-bottom: 16px;
-  background: rgba(255,255,255,0.05);
+  background: #f5f8fa;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .profile-photo-box img {
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: 50% 30%;
 }
 
 .profile-name {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
-  color: #ffffff;
-  letter-spacing: -0.3px;
+  color: #181c32;
+  letter-spacing: -0.2px;
   margin-right: 10px;
 }
 
 .profile-jabatan-row {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 8px;
-  margin-bottom: 18px;
-}
-.profile-jabatan-text {
-  font-size: 13px;
-  color: rgba(255,255,255,0.38);
+  gap: 6px;
+  margin-top: 6px;
+  margin-bottom: 16px;
 }
 
-/* Stat boxes */
+.profile-jabatan-text {
+  font-size: 13px;
+  color: #a1a5b7;
+}
+
+
+/* ===== Stat Boxes — Metronic dashed ===== */
 .profile-stats-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 8px;
 }
 
 .profile-stat-box {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 14px;
-  padding: 14px 20px;
-  min-width: 148px;
+  border: 1px dashed #e4e6ef;
+  border-radius: 8px;
+  padding: 12px 18px;
+  min-width: 140px;
 }
 
 .profile-stat-value {
   font-size: 17px;
   font-weight: 700;
-  color: #ffffff;
+  color: #181c32;
   line-height: 1.3;
 }
 
 .profile-stat-label {
   font-size: 10px;
-  color: rgba(255,255,255,0.32);
+  color: #a1a5b7;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.9px;
-  margin-top: 4px;
+  margin-top: 3px;
 }
 
-/* Badge overrides for dark theme */
-.dashboard-root .badge-danger  { background: rgba(239,68,68,0.18);   color: #fca5a5; border: 1px solid rgba(239,68,68,0.3); }
-.dashboard-root .badge-success { background: rgba(16,185,129,0.18);  color: #6ee7b7; border: 1px solid rgba(16,185,129,0.3); }
-.dashboard-root .badge-warning { background: rgba(245,158,11,0.18);  color: #fcd34d; border: 1px solid rgba(245,158,11,0.3); }
-.dashboard-root .badge-light-primary { background: rgba(14,165,233,0.15); color: #38bdf8; border: 1px solid rgba(14,165,233,0.2); }
 
-/* ===== Tab nav ===== */
+/* ===== Tab Nav — Metronic ===== */
 .dash-tab-wrap {
-  border-top: 1px solid rgba(255,255,255,0.06);
-  margin-top: 22px;
+  border-top: 1px solid #eff2f5;
+  margin-top: 20px;
 }
 
 .dash-tab-list {
@@ -382,7 +371,6 @@ a { text-decoration: none; color: inherit; }
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 2px;
   overflow-x: auto;
 }
 
@@ -390,93 +378,156 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   gap: 7px;
-  padding: 14px 18px;
-  color: rgba(255,255,255,0.32);
+  padding: 14px 20px;
+  color: #a1a5b7;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   border-bottom: 2px solid transparent;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
   white-space: nowrap;
   user-select: none;
   margin-bottom: -1px;
 }
-.dash-tab-btn:hover { color: rgba(255,255,255,0.65); }
+
+.dash-tab-btn:hover { color: #009ef7; }
+
 .dash-tab-btn.active-tab {
-  color: #38bdf8;
-  border-bottom-color: #38bdf8;
+  color: #009ef7;
+  border-bottom-color: #009ef7;
 }
 
-/* ===== Section wrappers (Overview/Digital/Alpro sections) ===== */
+
+/* ===== Section Wrapper ===== */
 .dash-section {
-  background: #0d1526;
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 20px 0 rgba(76,87,125,0.07);
   padding: 24px;
   margin-bottom: 24px;
 }
 
 .dash-section-header {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   padding-bottom: 14px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid #f5f8fa;
 }
 
 .dash-section-title {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
-  color: rgba(255,255,255,0.75);
+  color: #181c32;
   margin: 0;
 }
 
+
+/* ===== Inner Chart Card ===== */
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #f5f8fa;
+  border-radius: 10px;
+  box-shadow: 0 0 12px 0 rgba(76,87,125,0.05);
+  margin-bottom: 20px;
+}
+
+.glass-card-header {
+  padding: 16px 20px 14px;
+  border-bottom: 1px solid #f5f8fa;
+  display: flex;
+  align-items: center;
+}
+
+.glass-card-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #181c32;
+  margin: 0;
+}
+
+.glass-card-body { padding: 20px; }
+
+
 /* ===== Footer ===== */
 .dash-footer {
-  position: relative;
-  z-index: 2;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  padding: 22px 32px;
-  margin-top: 32px;
+  background: #ffffff;
+  border-top: 1px solid #eff2f5;
+  padding: 18px 32px;
+  margin-top: 8px;
 }
 
 .dash-footer-copy {
   font-size: 12px;
-  color: rgba(255,255,255,0.18);
+  color: #a1a5b7;
 }
 
-/* ===== Search dark override ===== */
-.dashboard-root .form-control-solid {
-  background: rgba(255,255,255,0.06) !important;
-  border: 1px solid rgba(255,255,255,0.09) !important;
-  color: #ffffff !important;
-  border-radius: 12px;
-}
-.dashboard-root .form-control-solid:focus {
-  background: rgba(255,255,255,0.09) !important;
-  border-color: rgba(14,165,233,0.5) !important;
-  box-shadow: 0 0 0 3px rgba(14,165,233,0.1) !important;
-}
-.dashboard-root .form-control-solid::placeholder {
-  color: rgba(255,255,255,0.2) !important;
+
+/* ===== Search dropdown (light) ===== */
+.search-dropdown {
+  background: #ffffff;
+  border: 1px solid #eff2f5;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(76,87,125,0.12);
 }
 
-.search-dark-dropdown {
-  background: #0d1526;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 12px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
-}
-
-.search-dark-item {
-  color: rgba(255,255,255,0.65);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+.search-dropdown-item {
+  color: #5e6278;
+  border-bottom: 1px solid #f5f8fa;
   transition: background 0.15s;
   cursor: pointer;
 }
-.search-dark-item:hover { background: rgba(255,255,255,0.05); }
-.search-dark-item:last-child { border-bottom: none; }
 
-/* ===== Spinner ===== */
-.dashboard-root .spinner-border { color: #0ea5e9; }
+.search-dropdown-item:hover { background: #f5f8fa; }
+
+.search-dropdown-item:last-child { border-bottom: none; }
+
+
+/* ===== Search hint panel (focused + empty) ===== */
+.search-hint-label {
+  padding: 12px 16px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #a1a5b7;
+}
+
+.search-hint-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 2px 14px 14px;
+}
+
+.search-hint-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(0,158,247,0.08);
+  border: 1px solid rgba(0,158,247,0.25);
+  color: #009ef7;
+  transition: all 0.15s ease;
+}
+
+.search-hint-chip:hover {
+  background: rgba(0,158,247,0.16);
+  border-color: rgba(0,158,247,0.45);
+}
+
+.search-hint-chip-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+}
+
+
+
+
 
 /* ============================================
    Login Page — Modern Glassy Business
@@ -491,19 +542,21 @@ a { text-decoration: none; color: inherit; }
   overflow: hidden;
 }
 
-/* Animated gradient background */
+
+/* ===== Animated Gradient Background ===== */
 .login-root::before {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 15% 55%, rgba(14,165,233,0.18) 0%, transparent 55%),
-    radial-gradient(ellipse at 85% 15%, rgba(99,102,241,0.18) 0%, transparent 55%),
-    radial-gradient(ellipse at 65% 85%, rgba(20,184,166,0.12) 0%, transparent 50%);
+    radial-gradient(ellipse at 15% 55%, rgba(0,158,247,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 15%, rgba(0,111,214,0.15) 0%, transparent 55%),
+    radial-gradient(ellipse at 65% 85%, rgba(0,198,255,0.10) 0%, transparent 50%);
   pointer-events: none;
 }
 
-/* Floating blobs */
+
+/* ===== Floating Blobs ===== */
 .login-blob {
   position: absolute;
   border-radius: 50%;
@@ -511,22 +564,31 @@ a { text-decoration: none; color: inherit; }
   pointer-events: none;
   animation: blobFloat 8s ease-in-out infinite;
 }
+
 .login-blob-1 {
-  width: 520px; height: 520px;
-  background: radial-gradient(circle, rgba(14,165,233,0.22), transparent 70%);
-  top: -160px; left: -120px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(0,158,247,0.22), transparent 70%);
+  top: -160px;
+  left: -120px;
   animation-delay: 0s;
 }
+
 .login-blob-2 {
-  width: 420px; height: 420px;
-  background: radial-gradient(circle, rgba(99,102,241,0.22), transparent 70%);
-  bottom: -100px; right: -100px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(0,111,214,0.20), transparent 70%);
+  bottom: -100px;
+  right: -100px;
   animation-delay: -3s;
 }
+
 .login-blob-3 {
-  width: 280px; height: 280px;
-  background: radial-gradient(circle, rgba(20,184,166,0.18), transparent 70%);
-  top: 50%; left: 65%;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(0,198,255,0.16), transparent 70%);
+  top: 50%;
+  left: 65%;
   animation-delay: -5s;
 }
 
@@ -536,7 +598,8 @@ a { text-decoration: none; color: inherit; }
   66%       { transform: translate(-15px, 20px) scale(0.97); }
 }
 
-/* Grid overlay subtle */
+
+/* ===== Subtle Grid Overlay ===== */
 .login-root::after {
   content: '';
   position: absolute;
@@ -548,7 +611,8 @@ a { text-decoration: none; color: inherit; }
   pointer-events: none;
 }
 
-/* Card */
+
+/* ===== Card ===== */
 .login-card {
   position: relative;
   z-index: 2;
@@ -567,12 +631,14 @@ a { text-decoration: none; color: inherit; }
     inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
-/* Brand */
+
+/* ===== Brand ===== */
 .login-brand { text-align: center; margin-bottom: 40px; }
 
 .login-logo {
-  width: 68px; height: 68px;
-  background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+  width: 68px;
+  height: 68px;
+  background: linear-gradient(135deg, #009ef7 0%, #006fd6 100%);
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -580,7 +646,7 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto 18px;
   font-size: 30px;
   color: white;
-  box-shadow: 0 10px 30px rgba(14,165,233,0.45);
+  box-shadow: 0 10px 30px rgba(0,158,247,0.45);
 }
 
 .login-title {
@@ -600,7 +666,8 @@ a { text-decoration: none; color: inherit; }
   font-weight: 500;
 }
 
-/* Alert */
+
+/* ===== Alert ===== */
 .login-alert {
   background: rgba(239,68,68,0.12);
   border: 1px solid rgba(239,68,68,0.25);
@@ -613,7 +680,8 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
 }
 
-/* Field */
+
+/* ===== Field ===== */
 .login-field { margin-bottom: 22px; }
 
 .login-label {
@@ -654,18 +722,22 @@ a { text-decoration: none; color: inherit; }
   transition: all 0.2s ease;
   outline: none;
 }
+
 .login-input::placeholder { color: rgba(255,255,255,0.18); }
+
 .login-input:focus {
-  border-color: rgba(14,165,233,0.55);
+  border-color: rgba(0,158,247,0.55);
   background: rgba(255,255,255,0.09);
-  box-shadow: 0 0 0 3px rgba(14,165,233,0.12);
-}
-.login-input:focus + .login-input-icon,
-.login-input-wrap:focus-within .login-input-icon {
-  color: rgba(14,165,233,0.7);
+  box-shadow: 0 0 0 3px rgba(0,158,247,0.12);
 }
 
-/* Eye toggle */
+.login-input:focus + .login-input-icon,
+.login-input-wrap:focus-within .login-input-icon {
+  color: rgba(0,158,247,0.7);
+}
+
+
+/* ===== Eye Toggle ===== */
 .login-eye {
   position: absolute;
   right: 14px;
@@ -678,13 +750,15 @@ a { text-decoration: none; color: inherit; }
   transition: color 0.2s;
   z-index: 1;
 }
+
 .login-eye:hover { color: rgba(255,255,255,0.65); }
 
-/* Submit button */
+
+/* ===== Submit Button ===== */
 .login-btn {
   width: 100%;
   padding: 16px;
-  background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+  background: linear-gradient(135deg, #009ef7 0%, #006fd6 100%);
   border: none;
   border-radius: 14px;
   color: #ffffff;
@@ -697,32 +771,201 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 28px rgba(14,165,233,0.35);
+  box-shadow: 0 8px 28px rgba(0,158,247,0.35);
   letter-spacing: 0.3px;
 }
+
 .login-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(14,165,233,0.45);
-  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  box-shadow: 0 14px 36px rgba(0,158,247,0.45);
+  background: linear-gradient(135deg, #009ef7 0%, #006fd6 100%);
 }
+
 .login-btn:active:not(:disabled) { transform: translateY(0); }
+
 .login-btn:disabled { opacity: 0.45; cursor: not-allowed; }
 
-/* Footer note */
+
+/* ===== Footer Note ===== */
 .login-divider {
   display: flex;
   align-items: center;
   gap: 12px;
   margin: 28px 0 0;
 }
+
 .login-divider-line {
   flex: 1;
   height: 1px;
   background: rgba(255,255,255,0.07);
 }
+
 .login-footer-text {
   font-size: 11px;
   color: rgba(255,255,255,0.18);
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
+
+
+
+
+
+/* ============================================
+   Dashboard — Dark Glass Variant (clone page)
+   Scoped under .dashboard-dark, mirrors login palette:
+   deep navy #060b18 + blue ambient glow + glassmorphism
+   ============================================ */
+.dashboard-dark {
+  position: relative;
+  background: #060b18;
+  overflow-x: hidden;
+}
+
+/* Ambient gradient glow — mirrors .login-root::before */
+.dashboard-dark::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 12% 18%, rgba(0,158,247,0.16) 0%, transparent 55%),
+    radial-gradient(ellipse at 88% 8%,  rgba(0,111,214,0.13) 0%, transparent 55%),
+    radial-gradient(ellipse at 72% 96%, rgba(0,198,255,0.09) 0%, transparent 50%);
+}
+
+/* Keep real content above the ambient layers */
+.dashboard-dark .dash-header,
+.dashboard-dark .dash-content,
+.dashboard-dark .dash-footer { position: relative; z-index: 1; }
+
+
+/* ===== Header — glassy navy ===== */
+.dashboard-dark .dash-header {
+  background: rgba(8,13,28,0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+}
+
+.dashboard-dark .dash-header-logo {
+  background: linear-gradient(135deg, #009ef7 0%, #006fd6 100%);
+  box-shadow: 0 6px 18px rgba(0,158,247,0.4);
+}
+
+
+/* ===== Search input — glass ===== */
+.dashboard-dark .form-control-solid {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.09);
+  color: #ffffff;
+}
+
+.dashboard-dark .form-control-solid::placeholder { color: rgba(255,255,255,0.25); }
+
+.dashboard-dark .form-control-solid:focus {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(0,158,247,0.55);
+  box-shadow: 0 0 0 3px rgba(0,158,247,0.12);
+  color: #ffffff;
+}
+
+
+/* ===== Search dropdown — glass ===== */
+.dashboard-dark .search-dropdown {
+  background: rgba(16,21,38,0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.09);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+}
+
+.dashboard-dark .search-dropdown-item {
+  color: rgba(255,255,255,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.dashboard-dark .search-dropdown-item:hover { background: rgba(255,255,255,0.05); }
+
+.dashboard-dark .search-hint-label { color: rgba(255,255,255,0.45); }
+
+
+/* ===== Profile card — glass ===== */
+.dashboard-dark .profile-glass-card {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.09);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.dashboard-dark .profile-photo-box {
+  background: rgba(255,255,255,0.05);
+  border: 3px solid rgba(255,255,255,0.08);
+}
+
+.dashboard-dark .profile-name { color: #ffffff; }
+
+.dashboard-dark .profile-jabatan-text { color: rgba(255,255,255,0.5); }
+
+.dashboard-dark .profile-stat-box {
+  border: 1px dashed rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.03);
+}
+
+.dashboard-dark .profile-stat-value { color: #ffffff; }
+
+.dashboard-dark .profile-stat-label { color: rgba(255,255,255,0.4); }
+
+
+/* ===== Tabs ===== */
+.dashboard-dark .dash-tab-wrap { border-top: 1px solid rgba(255,255,255,0.08); }
+
+.dashboard-dark .dash-tab-btn { color: rgba(255,255,255,0.45); }
+
+.dashboard-dark .dash-tab-btn:hover,
+.dashboard-dark .dash-tab-btn.active-tab {
+  color: #36a3ff;
+  border-bottom-color: #36a3ff;
+}
+
+
+/* ===== Sections + inner chart cards — glass ===== */
+.dashboard-dark .dash-section {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.09);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.dashboard-dark .dash-section-header { border-bottom: 1px solid rgba(255,255,255,0.07); }
+
+.dashboard-dark .dash-section-title { color: #ffffff; }
+
+.dashboard-dark .glass-card {
+  background: linear-gradient(135deg,
+              rgba(0,158,247,0.10) 0%,
+              rgba(255,255,255,0.02) 60%);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.07);
+}
+
+.dashboard-dark .glass-card-header { border-bottom: 1px solid rgba(255,255,255,0.06); }
+
+.dashboard-dark .glass-card-title { color: #ffffff; }
+
+
+/* ===== Footer ===== */
+.dashboard-dark .dash-footer {
+  background: transparent;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.dashboard-dark .dash-footer-copy { color: rgba(255,255,255,0.28); }
+
+
+/* ===== Leaflet map frame on dark ===== */
+.dashboard-dark .leaflet-container { border: 1px solid rgba(255,255,255,0.08); }

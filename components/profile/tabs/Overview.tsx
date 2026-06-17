@@ -6,19 +6,40 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
 } from 'recharts'
 
-interface Props { lokasi: string; tipe: string }
+type Theme = 'light' | 'dark'
+
+interface Props { lokasi: string; tipe: string; theme?: Theme }
 
 const MONTHS = ['jan','feb','mar','apr','mei','jun','jul','agu','sep','okt','nov','des']
 
-const TOOLTIP_STYLE = {
-  background: 'rgba(10,16,32,0.95)',
-  border: '1px solid rgba(255,255,255,0.1)',
-  borderRadius: 10,
-  color: '#e2e8f0',
-  fontSize: 12,
-}
-
-const TICK_STYLE = { fontSize: 11, fill: 'rgba(255,255,255,0.38)' }
+const CHART_THEME = {
+  light: {
+    tooltip: {
+      background: '#ffffff',
+      border: '1px solid #eff2f5',
+      borderRadius: 8,
+      color: '#181c32',
+      fontSize: 12,
+      boxShadow: '0 4px 12px rgba(76,87,125,0.1)',
+    },
+    tick: { fontSize: 11, fill: '#a1a5b7' },
+    grid: '#f5f8fa',
+    cursor: '#eff2f5',
+  },
+  dark: {
+    tooltip: {
+      background: 'rgba(16,21,38,0.96)',
+      border: '1px solid rgba(255,255,255,0.1)',
+      borderRadius: 8,
+      color: '#ffffff',
+      fontSize: 12,
+      boxShadow: '0 8px 24px rgba(0,0,0,0.5)',
+    },
+    tick: { fontSize: 11, fill: 'rgba(255,255,255,0.4)' },
+    grid: 'rgba(255,255,255,0.06)',
+    cursor: 'rgba(255,255,255,0.12)',
+  },
+} as const
 
 function toChartData(data: Record<string, any> | null) {
   if (!data) return []
@@ -28,7 +49,7 @@ function toChartData(data: Record<string, any> | null) {
   }))
 }
 
-function PerfChart({ title, data, color }: { title: string; data: any[]; color: string }) {
+function PerfChart({ title, data, color, t }: { title: string; data: any[]; color: string; t: typeof CHART_THEME[Theme] }) {
   return (
     <div className="glass-card">
       <div className="glass-card-header">
@@ -37,10 +58,10 @@ function PerfChart({ title, data, color }: { title: string; data: any[]; color: 
       <div className="glass-card-body">
         <ResponsiveContainer width="100%" height={260}>
           <LineChart data={data}>
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.07)" />
-            <XAxis dataKey="bulan" tick={TICK_STYLE} axisLine={false} tickLine={false} />
-            <YAxis tick={TICK_STYLE} axisLine={false} tickLine={false} />
-            <Tooltip contentStyle={TOOLTIP_STYLE} cursor={{ stroke: 'rgba(255,255,255,0.1)' }} />
+            <CartesianGrid strokeDasharray="3 3" stroke={t.grid} />
+            <XAxis dataKey="bulan" tick={t.tick} axisLine={false} tickLine={false} />
+            <YAxis tick={t.tick} axisLine={false} tickLine={false} />
+            <Tooltip contentStyle={t.tooltip} cursor={{ stroke: t.cursor }} />
             <Line
               type="monotone"
               dataKey="value"
@@ -57,9 +78,10 @@ function PerfChart({ title, data, color }: { title: string; data: any[]; color: 
   )
 }
 
-export default function Overview({ lokasi, tipe }: Props) {
+export default function Overview({ lokasi, tipe, theme = 'light' }: Props) {
   const [data, setData]     = useState<Record<string, any>>({})
   const [loading, setLoading] = useState(false)
+  const t = CHART_THEME[theme]
 
   useEffect(() => {
     async function fetchAll() {
@@ -71,7 +93,7 @@ export default function Overview({ lokasi, tipe }: Props) {
           types.map((t) => axios.post('/api/performance', { ...body, performance: t }))
         )
         const map: Record<string, any> = {}
-        types.forEach((t, i) => { map[t] = results[i].data[0] ?? null })
+        types.forEach((tp, i) => { map[tp] = results[i].data[0] ?? null })
         setData(map)
       } finally {
         setLoading(false)
@@ -99,22 +121,22 @@ export default function Overview({ lokasi, tipe }: Props) {
 
         {/* LIS — full width */}
         <div style={{ marginBottom: 20 }}>
-          <PerfChart title="Performance LIS" data={toChartData(data.lis)} color="#38bdf8" />
+          <PerfChart title="Performance LIS" data={toChartData(data.lis)} color="#009ef7" t={t} />
         </div>
 
         {/* Kw1–Kw4 — 2×2 grid */}
         <div className="row g-4">
           <div className="col-xl-6">
-            <PerfChart title="Performance Kw 1" data={toChartData(data.kw1)} color="#34d399" />
+            <PerfChart title="Performance Kw 1" data={toChartData(data.kw1)} color="#1BC5BD" t={t} />
           </div>
           <div className="col-xl-6">
-            <PerfChart title="Performance Kw 2" data={toChartData(data.kw2)} color="#a78bfa" />
+            <PerfChart title="Performance Kw 2" data={toChartData(data.kw2)} color="#8950FC" t={t} />
           </div>
           <div className="col-xl-6">
-            <PerfChart title="Performance Kw 3" data={toChartData(data.kw3)} color="#f87171" />
+            <PerfChart title="Performance Kw 3" data={toChartData(data.kw3)} color="#F64E60" t={t} />
           </div>
           <div className="col-xl-6">
-            <PerfChart title="Performance Kw 4" data={toChartData(data.kw4)} color="#fbbf24" />
+            <PerfChart title="Performance Kw 4" data={toChartData(data.kw4)} color="#FFA800" t={t} />
           </div>
         </div>
       </div>
@@ -127,16 +149,16 @@ export default function Overview({ lokasi, tipe }: Props) {
 
         <div className="row g-4">
           <div className="col-xl-6">
-            <PerfChart title="Performance Billing" data={toChartData(data.billing)} color="#38bdf8" />
+            <PerfChart title="Performance Billing" data={toChartData(data.billing)} color="#009ef7" t={t} />
           </div>
           <div className="col-xl-6">
-            <PerfChart title="Performance PranPc"  data={toChartData(data.pranpc)} color="#34d399" />
+            <PerfChart title="Performance PranPc"  data={toChartData(data.pranpc)} color="#1BC5BD" t={t} />
           </div>
           <div className="col-xl-6">
-            <PerfChart title="Performance Sales"   data={toChartData(data.sales)}  color="#f87171" />
+            <PerfChart title="Performance Sales"   data={toChartData(data.sales)}  color="#F64E60" t={t} />
           </div>
           <div className="col-xl-6">
-            <PerfChart title="Performance C3mr"    data={toChartData(data.c3mr)}   color="#fbbf24" />
+            <PerfChart title="Performance C3mr"    data={toChartData(data.c3mr)}   color="#FFA800" t={t} />
           </div>
         </div>
       </div>

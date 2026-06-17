@@ -6,28 +6,50 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
 } from 'recharts'
 
-interface Props { lokasi: string; tipe: string }
+type Theme = 'light' | 'dark'
+
+interface Props { lokasi: string; tipe: string; theme?: Theme }
 
 const MONTHS = ['jan','feb','mar','apr','mei','jun','jul','agu','sep','okt','nov','des']
 
-const TOOLTIP_STYLE = {
-  background: 'rgba(10,16,32,0.95)',
-  border: '1px solid rgba(255,255,255,0.1)',
-  borderRadius: 10,
-  color: '#e2e8f0',
-  fontSize: 12,
-}
-
-const TICK_STYLE = { fontSize: 11, fill: 'rgba(255,255,255,0.38)' }
+const CHART_THEME = {
+  light: {
+    tooltip: {
+      background: '#ffffff',
+      border: '1px solid #eff2f5',
+      borderRadius: 8,
+      color: '#181c32',
+      fontSize: 12,
+      boxShadow: '0 4px 12px rgba(76,87,125,0.1)',
+    },
+    tick: { fontSize: 11, fill: '#a1a5b7' },
+    grid: '#f5f8fa',
+    cursor: '#f5f8fa',
+  },
+  dark: {
+    tooltip: {
+      background: 'rgba(16,21,38,0.96)',
+      border: '1px solid rgba(255,255,255,0.1)',
+      borderRadius: 8,
+      color: '#ffffff',
+      fontSize: 12,
+      boxShadow: '0 8px 24px rgba(0,0,0,0.5)',
+    },
+    tick: { fontSize: 11, fill: 'rgba(255,255,255,0.4)' },
+    grid: 'rgba(255,255,255,0.06)',
+    cursor: 'rgba(255,255,255,0.05)',
+  },
+} as const
 
 function toChartData(data: Record<string, any> | null) {
   if (!data) return []
   return MONTHS.map((m) => ({ bulan: m.toUpperCase(), value: data[m] ?? 0 }))
 }
 
-export default function Digital({ lokasi, tipe }: Props) {
+export default function Digital({ lokasi, tipe, theme = 'light' }: Props) {
   const [addon, setAddon]     = useState<any>(null)
   const [loading, setLoading] = useState(false)
+  const t = CHART_THEME[theme]
 
   useEffect(() => {
     async function fetchAll() {
@@ -68,11 +90,11 @@ export default function Digital({ lokasi, tipe }: Props) {
             <div className="glass-card-body">
               <ResponsiveContainer width="100%" height={300}>
                 <BarChart data={toChartData(addon)}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.07)" />
-                  <XAxis dataKey="bulan" tick={TICK_STYLE} axisLine={false} tickLine={false} />
-                  <YAxis tick={TICK_STYLE} axisLine={false} tickLine={false} />
-                  <Tooltip contentStyle={TOOLTIP_STYLE} cursor={{ fill: 'rgba(255,255,255,0.04)' }} />
-                  <Bar dataKey="value" fill="#a78bfa" radius={[6,6,0,0]} name="Addon" />
+                  <CartesianGrid strokeDasharray="3 3" stroke={t.grid} />
+                  <XAxis dataKey="bulan" tick={t.tick} axisLine={false} tickLine={false} />
+                  <YAxis tick={t.tick} axisLine={false} tickLine={false} />
+                  <Tooltip contentStyle={t.tooltip} cursor={{ fill: t.cursor }} />
+                  <Bar dataKey="value" fill="#8950FC" radius={[6,6,0,0]} name="Addon" />
                 </BarChart>
               </ResponsiveContainer>
             </div>

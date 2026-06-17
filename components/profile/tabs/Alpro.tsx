@@ -9,22 +9,48 @@ import {
 
 const MapView = dynamic(() => import('@/components/ui/MapView'), { ssr: false })
 
-interface Props { lokasi: string; tipe: string }
+type Theme = 'light' | 'dark'
 
-const TOOLTIP_STYLE = {
-  background: 'rgba(10,16,32,0.95)',
-  border: '1px solid rgba(255,255,255,0.1)',
-  borderRadius: 10,
-  color: '#e2e8f0',
-  fontSize: 12,
-}
+interface Props { lokasi: string; tipe: string; theme?: Theme }
 
-const TICK_STYLE = { fontSize: 11, fill: 'rgba(255,255,255,0.38)' }
+const CHART_THEME = {
+  light: {
+    tooltip: {
+      background: '#ffffff',
+      border: '1px solid #eff2f5',
+      borderRadius: 8,
+      color: '#181c32',
+      fontSize: 12,
+      boxShadow: '0 4px 12px rgba(76,87,125,0.1)',
+    },
+    tick: { fontSize: 11, fill: '#a1a5b7' },
+    grid: '#f5f8fa',
+    cursor: '#f5f8fa',
+    legend: '#5e6278',
+    muted: '#a1a5b7',
+  },
+  dark: {
+    tooltip: {
+      background: 'rgba(16,21,38,0.96)',
+      border: '1px solid rgba(255,255,255,0.1)',
+      borderRadius: 8,
+      color: '#ffffff',
+      fontSize: 12,
+      boxShadow: '0 8px 24px rgba(0,0,0,0.5)',
+    },
+    tick: { fontSize: 11, fill: 'rgba(255,255,255,0.4)' },
+    grid: 'rgba(255,255,255,0.06)',
+    cursor: 'rgba(255,255,255,0.05)',
+    legend: 'rgba(255,255,255,0.6)',
+    muted: 'rgba(255,255,255,0.4)',
+  },
+} as const
 
-export default function Alpro({ lokasi, tipe }: Props) {
+export default function Alpro({ lokasi, tipe, theme = 'light' }: Props) {
   const [ports, setPorts]     = useState<any[]>([])
   const [history, setHistory] = useState<any[]>([])
   const [loading, setLoading] = useState(false)
+  const t = CHART_THEME[theme]
 
   useEffect(() => {
     async function fetchAll() {
@@ -73,23 +99,23 @@ export default function Alpro({ lokasi, tipe }: Props) {
       <div className="row g-4">
 
         {/* Map */}
-        <div className="col-xl-7">
+        <div className="col-12">
           <div className="glass-card" style={{ marginBottom: 0 }}>
             <div className="glass-card-header">
               <h3 className="glass-card-title">
                 ODP Map
-                <span style={{ color: 'rgba(255,255,255,0.35)', fontWeight: 400, marginLeft: 8, fontSize: 13 }}>
+                <span style={{ color: t.muted, fontWeight: 400, marginLeft: 8, fontSize: 13 }}>
                   {ports.length} titik
                 </span>
               </h3>
             </div>
-            <div className="glass-card-body" style={{ height: 420 }}>
+            <div className="glass-card-body" style={{ height: 'clamp(460px, 65vh, 760px)' }}>
               {center ? (
                 <MapView center={center} ports={ports} />
               ) : (
                 <div
                   className="d-flex align-items-center justify-content-center h-100"
-                  style={{ color: 'rgba(255,255,255,0.25)', fontSize: 13 }}
+                  style={{ color: t.muted, fontSize: 13 }}
                 >
                   <i className="bi bi-geo me-2" />
                   Tidak ada data ODP
@@ -100,7 +126,7 @@ export default function Alpro({ lokasi, tipe }: Props) {
         </div>
 
         {/* History chart */}
-        <div className="col-xl-5">
+        <div className="col-12">
           <div className="glass-card" style={{ marginBottom: 0 }}>
             <div className="glass-card-header">
               <h3 className="glass-card-title">ODP History</h3>
@@ -108,14 +134,14 @@ export default function Alpro({ lokasi, tipe }: Props) {
             <div className="glass-card-body">
               <ResponsiveContainer width="100%" height={370}>
                 <BarChart data={chartData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.07)" />
-                  <XAxis dataKey="bulan" tick={TICK_STYLE} axisLine={false} tickLine={false} />
-                  <YAxis tick={TICK_STYLE} axisLine={false} tickLine={false} />
-                  <Tooltip contentStyle={TOOLTIP_STYLE} cursor={{ fill: 'rgba(255,255,255,0.04)' }} />
-                  <Legend wrapperStyle={{ fontSize: 12, color: 'rgba(255,255,255,0.5)' }} />
-                  <Bar dataKey="Total" fill="#38bdf8" radius={[4,4,0,0]} />
-                  <Bar dataKey="Avai"  fill="#34d399" radius={[4,4,0,0]} />
-                  <Bar dataKey="Used"  fill="#f87171" radius={[4,4,0,0]} />
+                  <CartesianGrid strokeDasharray="3 3" stroke={t.grid} />
+                  <XAxis dataKey="bulan" tick={t.tick} axisLine={false} tickLine={false} />
+                  <YAxis tick={t.tick} axisLine={false} tickLine={false} />
+                  <Tooltip contentStyle={t.tooltip} cursor={{ fill: t.cursor }} />
+                  <Legend wrapperStyle={{ fontSize: 12, color: t.legend }} />
+                  <Bar dataKey="Total" fill="#009ef7" radius={[4,4,0,0]} />
+                  <Bar dataKey="Avai"  fill="#1BC5BD" radius={[4,4,0,0]} />
+                  <Bar dataKey="Used"  fill="#F64E60" radius={[4,4,0,0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
